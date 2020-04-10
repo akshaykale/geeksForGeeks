@@ -57,9 +57,8 @@ class GFG {
 		int num;
 		Scanner sc = new Scanner(System.in);
 		num = sc.nextInt();
-		System.out.println(""+num);
+		String input = sc.nextLine();
 		for(int i=0; i<num; i++) {
-		    String input = sc.nextLine();
 		    isSquare(sc.nextLine().split(" "));
 		}
 	}
@@ -99,7 +98,7 @@ class GFG {
 	        return;
 	    }
 	    
-	    System.out.println("false");
+	    System.out.println("No");
 	    
 	}
 }
