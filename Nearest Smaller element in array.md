@@ -1,3 +1,9 @@
+# Nearest smaller element
+
+https://www.geeksforgeeks.org/find-the-nearest-smaller-numbers-on-left-side-in-an-array/
+
+https://practice.geeksforgeeks.org/problems/immediate-smaller-element/0
+
 
 ## Solution: Nearest smaller element in left side [O(N)] using stack
 ```java
