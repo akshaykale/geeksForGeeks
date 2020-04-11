@@ -55,17 +55,17 @@ class GFG {
 	}
 	
 	public static int canForm(String s1, String s2) {
+	    if(s1.length() != s2.length()) return 0;
+	    if(s1.length() == 2 && s1 == s2) return 1;
 	    
-	    String cwS1 = s1.substring(0, s1.length()-1) ;
-	    cwS1 = s1.substring(s1.length()-2, s1.length()) + cwS1;
-	    
-	    if (cwS1 == s2) {return 1;}
+	    String x = s1.substring(s1.length()-2, s1.length());
+	    String cwS1 = s1.substring(0, s1.length()-2) ;
+	    cwS1 = /*x.substring(1,2) + x.substring(0,1)*/ x + cwS1;
+	    if (cwS1.equals(s2)) {return 1;}
 	    
 	    String ccwS1 = s1.substring(2, s1.length()) ;
 	    ccwS1 = ccwS1 + s1.substring(0, 2);
-	    
-	    if (ccwS1 == s2) {return 1;}
-	    
+	    if (ccwS1.equals(s2)) {return 1;}
 	    return 0;
 	    
 	}
