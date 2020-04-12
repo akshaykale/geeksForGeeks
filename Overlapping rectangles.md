@@ -1,4 +1,4 @@
-#Overlapping rectangles
+# Overlapping rectangles
 
 https://www.geeksforgeeks.org/find-two-rectangles-overlap/
 
@@ -43,5 +43,43 @@ Testcase 1: According to the coordinates given as input ,two rectangles formed o
 
 ```java
 
+/*package whatever //do not write package name here */
 
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class GFG {
+    
+    static class Point {
+        int x,y;
+        public Point(int x1,int y1){
+            this.x = x1;
+            this.y = y1;
+        }
+        
+    }
+	public static void main (String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int T = sc.nextInt();
+		
+		for (int i=0; i<T;i++) {
+		    Point l1 = new Point(sc.nextInt(), sc.nextInt());
+		    Point r1 = new Point(sc.nextInt(), sc.nextInt());
+		    Point l2 = new Point(sc.nextInt(), sc.nextInt());
+		    Point r2 = new Point(sc.nextInt(), sc.nextInt());
+		    System.out.println(""+isRect(l1,r1,l2,r2));
+		}
+	}
+	
+	public static int isRect(Point l1, Point r1, Point l2, Point r2) {
+	    
+	    if(r1.x < l2.x || r2.x < l1.x) return 0;
+	    if(l2.y < r1.y || l1.y < r2.y) return 0;
+	    
+	    return 1;
+	    
+	}
+}
 ```
